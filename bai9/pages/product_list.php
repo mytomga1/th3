@@ -9,6 +9,7 @@
     </ol>
 </section>
 
+
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -27,6 +28,10 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
+
+                <!--Nút add new button-->
+                <!--<div class="div-addnewPro"> <button data-id="" type="button" class="btn btn-danger glyphicon glyphicon-plus btnUpdate" > Add New Product</button></div>-->
+                    <div class="row"><div class="col-sm-1 text-left "><button style="" id="addBtn" class="btn bg-maroon btn-flat margin"> <i class="fa fa-fw fa-plus"> </i>ADD NEW PRODUCT</button></div></div>
                     <table class="table table-hover">
                         <tr>
                             <th>ID</th>
@@ -42,7 +47,8 @@
                                 <td><?= number_format($product[2],0,',','.') ?>đ</td>
                                 <td><?= $product[3] ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm">Sửa</button>
+                                    <button data-id="<?= $product[0] ?>" type="button" class="btn btn-primary btn-sm btnUpdate" >Chi Tiết</button>
+                                    <button data-id="<?= $product[0] ?>" type="button" class="btn btn-primary btn-sm btnUpdate" >Sửa</button>
                                     <button data-id="<?= $product[0] ?>" type="button" class="btn btn-danger btn-sm btnDelete">Xóa</button>
                                 </td>
                             </tr>
@@ -54,4 +60,5 @@
             <!-- /.box -->
         </div>
     </div>
+
 </section>
