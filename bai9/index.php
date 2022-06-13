@@ -13,7 +13,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT id, name, price, stock FROM products LIMIT 20";
+    $sql = "SELECT id, name, price, stock FROM products order by id desc LIMIT 20";
 
     $arrProducts = [];
 
