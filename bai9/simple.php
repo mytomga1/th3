@@ -161,28 +161,9 @@
     <script src="dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-    <script type="text/javascript">
-        $( document ).ready(function() {
-            // buoc 1
-            $('.btnDelete').click(function () {
-                var id = $(this).attr('data-id');
-                var me =  $(this);
 
-                $.ajax({
-                    url : '',
-                    type: 'POST',
-                    data: {
-                        action: 'DELETE',
-                        productID : id
-                    },
-                    success: function (res) {
-                        $('.product-'+id).remove();
-                    },
-                    error: function (res) {
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- ajaxFunction (add + load + delete) -->
+    <script src="dist/js/ajaxFunction.js"></script>
+    <?php include 'model/addnewpro.php'?>
     </body>
 </html>

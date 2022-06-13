@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 2 | Dashboard</title>
+        <title>Home</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
@@ -59,9 +59,9 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <?php //include_once 'pages/dashboard.php' ?>
+            <?php include_once 'pages/dashboard.php' ?>
             <!-- Main content -->
-            <?php include_once 'pages/product_list.php' ?>
+            <?php //include_once 'pages/product_list.php' ?>
             <?php //include_once 'pages/addnew_product.php' ?>
             <!-- /.content -->
         </div>
@@ -121,34 +121,6 @@
     <script src="dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-    <script type="text/javascript">
-        $( document ).ready(function() {
-            // buoc 1
-            $('.btnDelete').click(function () {
-                var id = $(this).attr('data-id');
-                var me =  $(this);
 
-                $.ajax({
-                    url : '',
-                    type: 'POST',
-                    data: {
-                        action: 'DELETE',
-                        productID : id
-                    },
-                    success: function (res) {
-                        $('.product-'+id).remove();
-                    },
-                    error: function (res) {
-                    }
-                });
-            });
-        });
-    </script>
-        <?php include 'model/addnewpro.php'?>
-    <script>
-        $('#addBtn').click(function (){
-            $('#modaladdnewpro').modal();
-        })
-    </script>
     </body>
 </html>
